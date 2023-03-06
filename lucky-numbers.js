@@ -30,5 +30,13 @@ export function luckyNumber(value) {
  * @returns {string} error message
  */
 export function errorMessage(input) {
-  throw new Error('Implement the errorMessage function');
+  if (input) {
+      if (Number(input) > 0) {
+          return '';
+      } else {
+          return 'Must be a number besides 0';
+      }
+  } else {
+      return 'Required field';
+  }
 }
